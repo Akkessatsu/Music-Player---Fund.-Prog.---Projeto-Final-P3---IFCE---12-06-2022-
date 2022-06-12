@@ -1,0 +1,30 @@
+//6) Explique, com suas próprias palavras, o que faz o seguinte trecho de código:
+
+const createSongList = () => {
+  const list = document.createElement("ol");
+  for (let i = 0; i < songs.length; i++) {
+    const item = document.createElement("li");
+    item.appendChild(document.createTextNode(songs[i].slice(0,-4)));
+    list.appendChild(item);
+  }
+  return list;
+};
+
+/*
+ É uma função que cria a lista de músicas disponíveis. Para isso são utilizados alguns métodos da webAPI DOM,
+que serão explicados em mais detalhes à frente.
+
+Inicialmente, podemos checar a criação de um elemento <ol> vazio (ordered list) no documento, e para manipulação posterior
+no código javascript o mesmo é armazenado na constante list.
+Essa lista servirá para se adicionar os itens, que seriam as músicas, que são acrescidos por meio do loop for da função.
+
+Esse loop a cada iteração cria um elemento <li> a princípio vazio e armazenado na constante item. Esse elemento item vazio
+é preenchido então com texto por meio do método "document.createTextNode" e ".appendChild" da webAPI dom, que coloca o nome da música no item tirando sua extensão,
+por conta que a função slice retorna a string correspondente ao seu índice no array sem os últimos 4 caracteres, que seriam: ".mp3".
+
+Enfim, o item de cada iteração é adicionado por meio do ".appendChild" na lista <ol>
+
+Depois de todas as iterações forem realizadas, e consequentemente todos os nomes das músicas foram adicionados à lista,
+a função retorna a constante list para finalmente ser aderida ao documento e poder ser visualizada na página.
+*/
+
