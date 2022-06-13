@@ -18,7 +18,7 @@ const songs = [
 'Audioslave - Show Me How to Live',
 'BTS - Baepsae (Silver Spoon)',
 'Bury the Light',
-'Dreamcatcher - Fly high',
+'Dreamcatcher - Fly High',
 'Metallica - Sad But True',
 'Omori Version - Bo ens My Time'];
 
